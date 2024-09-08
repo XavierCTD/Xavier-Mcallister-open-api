@@ -38,3 +38,4 @@ fetch('https://www.swapi.tech/api/species/1')
      proname.appendChild(starAPI)
    }
  })
+ .catch(err => console.log(err))
