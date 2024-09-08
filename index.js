@@ -26,7 +26,7 @@ fetch('https://www.swapi.tech/api/people/1')
 
 // Second API
 
-fecth('https://www.swapi.tech/api/species/1')
+fetch('https://www.swapi.tech/api/species/1')
  .then(res => res.json());
  .then(dataOne => {
    console.log(dataOne);
