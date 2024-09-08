@@ -3,19 +3,38 @@ const today = new Date();
 let thisDay = today.getFullYear();
 console.log(thisDay);
 
-// Creating API
+// Creating Multiple APIs
 
-/*fetch('https://www.swapi.tech/api/people/1')
-.then(response => {
-  if (!response.ok) {
-    throw new Error('Request failed');
+
+// First API
+
+fetch('https://www.swapi.tech/api/people/1')
+.then(response => response.json());
+.then(respositoryFetched => {
+  console.log(repositoryFetched);
+  const starWarsPeople = document.getElementById('starwars');
+  const projectList = starWarsPeople.querySelector('#people');
+  for (let = 0; 0 < repositoryFetched.length; i++){
+    let starwars = document.createElement('li');
+    starwars.innerText = repositoryFetched[i].name;
+    projectList.appendChild(starwars)
   }
-  return response.json(); 
 })
-.then(data => {
-  console.log(data);
-})
-.catch(error => {
-  console.error('An error occurred:', error);
-});*/
+.catch(err => console.log(err))
 
+
+
+// Second API
+
+fecth('https://www.swapi.tech/api/species/1')
+ .then(res => res.json());
+ .then(dataOne => {
+   console.log(dataOne);
+   const starWarSpecies = document.getElementById('starAPI');
+   const proName = starWarsSpecies.querySelector('#species');
+   for (let = 0; 0 < dataOne.length; i++){
+     let starAPI = document.createElement('li');
+     starAPI.innertext = dataOne[i].name;
+     proname.appendChild(starAPI)
+   }
+ })
