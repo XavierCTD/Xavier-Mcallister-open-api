@@ -14,13 +14,17 @@ fetch('https://www.swapi.tech/api/people/')
  return response.json(); 
 })
 .then(data => {
-const header = document.getElementById('Head');
-header.textContent = `${data.results[0].name}`
+  console.log(data);
 })
 
 .catch(error => {
   console.error('An error occurred:', error);
 });
+
+// Displaying Info 
+
+const header = document.getElementById('Head');
+header.textContent = `${data.results[0].name}` 
 
 // Displaying Info 
 
