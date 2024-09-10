@@ -25,8 +25,3 @@ fetch('https://www.swapi.tech/api/people/')
 
 const header = document.getElementById('Head');
 header.textContent = `${data.results[0].name}` 
-
-// Displaying Info 
-
-const header = document.getElementById('Head');
-header.textContent = `${data.results[0].name}` 
