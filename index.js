@@ -6,22 +6,21 @@ console.log(thisDay);
 
 // Creating API
 
-fetch('https://www.swapi.tech/api/people/')
-.then(response => {
-  if (!response.ok) {
-    throw new Error('Request failed');
+fetch('https://www.swapi.tech/api/people/1'), {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name: 'Luke Skywalker'
+    })
   }
- return response.json(); 
-})
-.then(data => {
-  console.log(data);
-})
-
-.catch(error => {
-  console.error('An error occurred:', error);
-});
-
-// Displaying Info 
-
-const header = document.getElementById('Head');
-header.textContent = `${data.results[0].name}` 
+  .then(res => {
+   return res.json() 
+  })
+  .then(data => {
+    data.forEach( user => {
+      const markup = `<li></li>`
+    });
+    console.log(data)})
+  .catch(Error => console.log(Error));
