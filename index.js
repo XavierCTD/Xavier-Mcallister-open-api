@@ -7,6 +7,7 @@ console.log(thisDay);
 // Creating API
 
 fetch('https://www.swapi.tech/api/people/1'), {
+
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
